@@ -81,6 +81,11 @@ app.get('/', (req, res) => {
     res.sendFile('app.html', {root: "frontend/"});
 })
 
+// static vesion
+app.get('/c', (req, res) => {
+    res.sendFile('appc.html', {root: "frontend/"});
+})
+
 app.use(express.static("frontend"))
 
 /**

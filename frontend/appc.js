@@ -27,26 +27,15 @@ function mkimg(id, src, target, coord) {
     img.src = base + src
     img.useMap = "#map" + id
     img.referrerPolicy = "no-referrer"
-
     // to get real dimens
     img.onload = () => {
-        // scale according to device width
-        // TODO use parent width if not full width
-        // or append a blank image and see its's width maybe? After append
-        // maybe some sort of optimisation going here
-        dwidth = document.documentElement.clientWidth
-        dheight = img.height*dwidth/img.width
-        mkmap(id, target, coord, dwidth, dheight)
+        mkmap(id, target, coord, img.width, img.height)
     }
     img.onerror = () => {
         if (!alertcount) alert(`could not load ${id}. Reload`)
         alertcount = true
     }
-    img.className = 'd-block w-100'
-    imgclass = document.createElement('div')
-    imgclass.className = (id==0)? 'carousel-item active' : 'carousel-item'
-    imgclass.appendChild(img)
-    document.getElementById("incon").appendChild(imgclass)
+    document.getElementsByClassName("container")[0].appendChild(img)
 
 }
 

@@ -2,11 +2,29 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <head>
-    <link rel="stylesheet" href="nav.css">
     <script src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" 
+     crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" 
+     crossorigin="anonymous"></script>
+
 </head>
 <body>
 <div class='container'>
 </div>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false" data-bs-keyboard="true">
+    <div class="carousel-inner" id="incon">
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" id="bl" style="height: 6px; top: 50%;">
+        <span class="carousel-control-prev-icon" style="background-color: red" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" id="br" style="height: 6px; top: 50%;">
+        <span class="carousel-control-next-icon" style="background-color: red" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>
 </body>
 </html>
