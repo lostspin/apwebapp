@@ -78,6 +78,7 @@ function getReq(res, day, url) {
 }
 
 app.get('/', (req, res) => {
+    console.log("init request");
     res.sendFile('app.html', {root: "frontend/"});
 })
 
